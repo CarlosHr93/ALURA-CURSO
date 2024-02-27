@@ -5,50 +5,68 @@
     <head>
         <meta charset="UTF-8"> <!-- definir el lenguaje -->
         <title>CONTACTO</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="Producto.css">
     </head>
 
     <body>
         <header>
-            <h1 class="titulo-principal">Barbería Alura</h1>
-            <Nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="Productos.html"></a>Productos</li>
-                </ul>
-            </Nav>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png"></h1>
+                <Nav >
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </Nav>
+            </div>
 
         </header>
-        <img id="Resources" src="Resources/banner.jpg">
-        
-        <div class="principal"><!-- div para hacer bloques en la pagina BLOQUE 1-->   
-            <!-- class para difinir un espacion el css -->
-            <h2 class="titulo-centralizado">Sobre la Barbería Alura</h2>
+    <main>
+        <form >
+            <label for="nombreApellido">Nombre y Apellido</label>
+            <input type="text" id="nombreApellido" class="input-patron" required>
+            <!-- requered para campos obligatorios -->
+            
+            <label for="correo">Correo electronico</label>
+            <input type="email" id="correo" class="input-patron" required placeholder="email@dominio.com">
+            <!--placeholder para poner datos por detras -->
 
-            <!-- <p>Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente.</p>
+            <label for="telefono">Numero de telefono</label>
+            <input type="tel" id="telefono" class="input-patron" required placeholder="(XX) XXXXX XXXX">
+            
 
-            <p id="mision"><em>Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes"</strong>.</em></p>
+            <label for="msj">Mensaje</label>
+            <textarea name="" id="mjsUsuario" cols="70" rows="10" class="input-patron"></textarea>
+            <div>
+                <p class="test" name="test">Como te gustaria ser contactado?</p>
+                
+                <label for="rb-email"><input type="radio" name="contacto">Correo electronico</label>
 
-            <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes.</p>  -->
+                <label for="rb-telefono"><input type="radio" name="contacto">llamada telefonica</label>
 
-        </div>
+                <label for="rb-whatsapp"><input type="radio" name="contacto" checked>Mensaje por whatsapp</label>
+                <!-- checked para dejar saleccionado uno por defecto -->
 
-        <div class="diferenciales">
+            </div>
+            <div>
+                <p>¿Cómo le gustaría que lo contactemos?</p>
+                <select>
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+            </div>
+            <label for="checkbox"><input type="checkbox" name="" id="" checked>Le gustaría recibir novedades de la Barbería Alura?</label>
 
-            <h3 class="titulo-centralizado">Diferenciales</h3>
-        
-            <ul><!-- lista no ordenada -->
-
-                <li class="items">Atención personalizada a los clientes</li><!-- iteam de lista -->
-                <li class="items">Espacio diferenciado</li>
-                <li class="items">Localización</li>
-                <li class="items">Profesesionales calificados</li>
-            </ul>
-
-            <img src="Resources/diferenciales.jpg" class="imagenDiferenciales">
-
-        </div>
-        
+            <input type="submit" value="Enviar formulario" class="input-patron">
+        </form>
+    </main>
+        <footer>
+            <img src="imagenes/logo-blanco.png">
+            <p class="Copyright"> &copy;  Copyright Barberia Alura</p>
+           </footer>
         
     </body>
 </html>
