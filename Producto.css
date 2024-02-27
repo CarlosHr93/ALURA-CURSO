@@ -97,7 +97,7 @@ form{
     margin: 40px 0;
 }
 
-form label, form p{
+form label, form legend{
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
@@ -112,4 +112,34 @@ form label, form p{
 
 .checkbox{
     margin:20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border-radius: 10px;
+    transition: 1s all;
+    cursor: pointer;
+}
+/* curso para agregar el cursos de manita */
+/* transition es el tiempo para hacer el cambio a color */
+.enviar:hover{
+    background: brown;
+    transform: scale(1.2);
+}
+table{
+    margin: 40px 40px;
+}
+thead{
+    background: #555;
+    color: white;
+    font-weight: bold;
+}
+td,th{
+    border: 1px solid #000;
+    padding: 8px 15px;
 }
