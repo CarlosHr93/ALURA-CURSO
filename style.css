@@ -1,7 +1,12 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header{
     background-color: #bbb;
     padding: 20px 0;  /* espaciamiento interno */
 }
+
 .caja{
     /* llamar a las clases ".nombre" */
     width: 940px;
@@ -29,54 +34,252 @@ nav a{
     text-decoration: none;
 }
 
+nav a:hover{
+    /* hacer efecto */
+    color: #c78c19;
+    text-decoration: underline;
+}
+.productosLista{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+ }
+ .productosLista li{
+     display: inline-block;
+     text-align: center;
+     width: 30%;
+     vertical-align: top;
+     background: #ccc;
+     margin: 0 1.5%;
+     padding: 30px 20px;
+     box-sizing: border-box;
+     border: 2px solid #000;
+     border-radius: 10px;/* BORDES */
+ }
+ .productosLista li:hover{
+    border-color: #c78c19;
+ }
+ 
+ .productosLista li:active{
+    border-color: chartreuse;
+ }
+ .productosLista h2{
+     font-size: 30px;
+     font-weight: bold;
+ }
+ .productosLista li:hover h2{
+    font-size: 33px;
+ }
+ 
+ .descripcionProducto{
+     font-size: 18 px;
+ }
+ 
+ .precioProducto{
+     font-size: 20px;
+     font-weight: bold;
+     margin-top: 10px;
+ }
 
-#banner{
+ footer{
+    text-align: center;
+    background:url(imagenes/bg.jpg);
+    padding:40px;
+ }
+ 
+ .Copyright{
+    color: #fff;
+    font-size: 13px;
+    margin: 20px;
+ }
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-patron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin:20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border:none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+/* curso para agregar el cursos de manita */
+/* transition es el tiempo para hacer el cambio a color */
+.enviar:hover{
+    background: brown;
+    transform: scale(1.2);
+}
+table{
+    margin: 40px 40px;
+}
+thead{
+    background: #555;
+    color: white;
+    font-weight: bold;
+}
+td,th{
+    border: 1px solid #000;
+    padding: 8px 15px;
+}
+
+/* pagina inicial */
+.banner{
     width:100%;
 }
 
 .principal{
-    background: #CCCCCC;
-    padding: 20px;
+    background: #fefefe;
+    padding: 3em 0;
+    width: 100%;
+    margin: 0 auto;   
 }
 
-.titulo-centralizado{
+.titulo-principal{
     text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
 }
-
-p{
-    text-align: center;
+.titulo-principal:first-letter{
+    font-weight:bold;
 }
-
-em strong{
-    color:red;
-}
-
-#mision{
-    font-size: 20px;
-}
-
-.diferenciales{
-    background: #FFFFFF;
-    padding: 30px;
-}
-
-.diferenciales{
-    background: #FFFFFF;
-    padding: 30px;
-}
-
-.items{
+p:first-line{
     font-style: italic;
 }
 
-ul{
+/* .titulo-principal:before{
+    content: "{";
+}
+.titulo-principal:after{
+    content: "}";
+} */
+.principal p{
+    /* text-align: center; */
+    margin: 0 0 1em;
+}
+
+.principal em strong{
+    color:red;
+    font-style: italic;
+}
+
+.utensilio{
+    /* width: 120px; */
+    float: left;
+    margin: 0 20px 20px 0;
+    width: calc(20% - 20px);
+    /* el calc() permite calcular los tamaños de pantallas */
+}
+
+.mapa{
+    /* align-content: center; */
+    padding: 3em 0;
+    /* 3 em es 3 veces el predeterminado */
+    background: linear-gradient(#FEFEFE, #888888);
+    /* linear-gradient degradado en linea, para agregar grados de inclinacion 45deg y se manejan porcetajes para cada color */
+    /* background: radial-gradient(#888,#fefefe 60%); */
+    /*  */
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.contenidoMapa{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    background: #888;
+    padding: 3em 0; 
+}
+
+.contenido-diferenciales{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.lista-diferenciales{
+    width: 100%;
     display: inline-block;
     vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
+}
+
+.items{
+    line-height: 1.5;
+}
+.diferenciales .items:before{
+    content:"★";
+}
+.items:last-child{
+    font-weight: bold;
+/* para el uso de pseudo clases first-child , last-child , nth-clid */
 }
 
 .imagenDiferenciales{
-    width: 50%;
+    width: 100%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000;
+    /* opacity: 70%; 
+    box-shadow agregar sobra detras de objeto puede recibor 5 parametros */
+
+    /* Opacity para hacer transparente o manipular el transparencia */
+    /* float: right; */
 }
 
+.imagenDiferenciales:hover{
+    /* transform: scale(1.2); */
+    /*transform: scale() hace crecer el objeto */
+    opacity: 0.3;
+    /* transform: opacity() para apocar el objeto */
+
+
+}
+
+.video{
+    width: auto;
+    margin: 1em auto;}
+
+@media screen and (max-width: 480px) {
+
+ h1{
+    text-align: center;
+ }
+
+ nav{
+    position: static;
+ }
+
+ .caja, .principal,.mapa,.contenidoMapa, .diferenciales, .video{
+    width:auto;
+ }
+
+ .contenido-diferenciales, .imagenDiferenciales{
+    width: 100%;
+ }
+}
